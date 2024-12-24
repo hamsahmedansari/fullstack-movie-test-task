@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/fonts/Montserrat-VariableFont_wght.ttf) format("opentype");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+    background-color: #093545;
+    height: 100vh;
+}
+
+.movie-list {
+  min-height: 100vh;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.pagination li {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #092C39;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat !important;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff !important;
+}
+
+.pagination .previous {
+  background-color: transparent !important;
+  width: 38px !important;
+  height: 24px !important;
+  font-family: Montserrat !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  align-items: center !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+
+.pagination .next {
+  background-color: transparent;
+  width: 38px !important;
+  height: 24px !important;
+  font-family: Montserrat !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  align-items: center !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+
+.pagination .active {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #2BD17E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat !important;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff !important;
+}
+
+.image_height {
+  display: none;
+}
+
+.mb-createmovie-button_1 {
+  display: none;
+}
+
+.mb-r {
+  transition: 0.5s ease;
+}
+
+.mb-r:hover {
+  background: linear-gradient(0deg, rgba(8, 41, 53, 0.55), rgba(8, 41, 53, 0.55)),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09));
+}
+
+@media screen and (max-width: 1050px) {
+
+  .mb-createmovie-main {
+    padding: 100px 20px;
+  }
+
+  .mb-createmovie {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .mb-createmovie-heading {
+    width: 380px;
+    height: 40px;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+  }
+
+  .mb-createmovie-input {
+    width: 100%;
+  }
+
+  .mb-createmovie-button {
+    display: none;
+  }
+
+  .mb-createmovie-button_1 {
+    display: flex;
+  }
+
+  .mb-createmovie-image {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .footer-image {
+    margin-top: 0 !important;
+  }
+  
+  .empty-text-div {
+    width: 380px;
+    height: 80px;
+  }
+  .empty-text {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .empty-button-div {
+    width: 360px;
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 656px) {
+
+  .image_height-1 {
+    display: none;
+  }
+
+  .image_height {
+    display: block;
+   }
+
+  .mb-r {
+    width: 180px;
+    height: 334px;
+    gap: 16px
+  }
+
+  .mb-r-img {
+    width: 160px;
+    height: 246px;
+    border-radius: 12px, 12px, 0px, 0px;
+  }
+
+  .mb-r-main {
+    gap: 20px;
+    padding: 2px;
+  }
+
+  .mb-logout {
+    display: none;
+  }
+
+  .mb-r-main-head {
+    padding: 0;
+  }
+
+  .mb-heading-main {
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .mb-heading-div {
+    width: 225px;
+    height: 40px;
+  }
+
+  .mb-heading {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .mb-r {
+    width: 140px;
+  }
+
+  .mb-r-img {
+    width: 125px;
+  }
+}
